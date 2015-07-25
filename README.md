@@ -4,14 +4,14 @@ This library to use the [Griffin Powermate](https://store.griffintechnology.com/
 
 ![Griffin Powermate](https://store.griffintechnology.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/a/na16029_powermate_1.jpg)
 
-**Note: this a work in progress.**
-
-
 ## Requirements
 - Windows (yes, this is windows only; tested on Windows 7 x64)
 - Python 2.7 (tested on 2.7.9)
 - [pywinusb](https://github.com/rene-aguirre/pywinusb)
 - A [Griffin Powermate](https://store.griffintechnology.com/powermate)!
+
+## Install with pip
+```pip install griffin_powermate```
 
 ## Usage
 ```
