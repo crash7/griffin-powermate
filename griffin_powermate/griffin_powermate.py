@@ -1,4 +1,4 @@
-from pywinusb.hid import HidDevice, HidDeviceFilter
+from pywinusb.hid import HidDeviceFilter
 
 
 def find_griffin_powermate():
