@@ -17,11 +17,11 @@ This library to use the [Griffin Powermate](https://store.griffintechnology.com/
 ## Usage
 ```
 def move_listener(direction, button):
-  print "Moved: {0} - {1}".format(direction, button)
+  print("Moved: {0} - {1}".format(direction, button))
 
 devices = GriffinPowermate.find_all()
 if len(devices) > 0:
-  print "Found Powermates"
+  print("Found Powermates")
   powermate = devices[0]
     
   try:
