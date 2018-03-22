@@ -60,14 +60,14 @@ if __name__ == '__main__':
   from msvcrt import kbhit
 
   def move_listener(direction, button):
-    print "Moved: {0} - {1}".format('LEFT' if direction == GriffinPowermate.MOVE_LEFT else 'RIGHT', button)
+    print("Moved: {0} - {1}".format('LEFT' if direction == GriffinPowermate.MOVE_LEFT else 'RIGHT', button))
 
   def raw_listener(data):
-    print "Moved: {0}".format(data)
+    print("Moved: {0}".format(data))
 
   devices = GriffinPowermate.find_all()
   if len(devices) > 0:
-    print "Found Powermates"
+    print("Found Powermates")
     powermate = devices[0]
     
     try:
