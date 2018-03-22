@@ -7,6 +7,7 @@ This library to use the [Griffin Powermate](https://store.griffintechnology.com/
 ## Requirements
 - Windows (yes, this is windows only; tested on Windows 7 x64)
 - Python 2.7 (tested on 2.7.9)
+- Python 3 (tested on 3.5)
 - [pywinusb](https://github.com/rene-aguirre/pywinusb)
 - A [Griffin Powermate](https://store.griffintechnology.com/powermate)!
 
