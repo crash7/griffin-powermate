@@ -12,7 +12,7 @@ This library to use the [Griffin Powermate](https://store.griffintechnology.com/
 - A [Griffin Powermate](https://store.griffintechnology.com/powermate)!
 
 ## Install with pip
-```pip install griffin_powermate```
+```pip install git+https://github.com/alexisfcote/griffin-powermate```
 
 ## Usage
 ```
