@@ -24,9 +24,9 @@ class GriffinPowermate():
     [0, button_status, move, 0, bright, pulse_status, pulse_value]
     """
     move = 1 if raw_data[2] < 128 else -1
-    if self.__events.has_key('move'):
+    if 'move' in self.__events:
       self.__events['move'](move, raw_data[1])
-    if self.__events.has_key('raw'):
+    if 'raw' in self.__events:
       self.__events['raw'](raw_data)
 
   def is_plugged(self):
@@ -60,14 +60,14 @@ if __name__ == '__main__':
   from msvcrt import kbhit
 
   def move_listener(direction, button):
-    print "Moved: {0} - {1}".format('LEFT' if direction == GriffinPowermate.MOVE_LEFT else 'RIGHT', button)
+    print("Moved: {0} - {1}".format('LEFT' if direction == GriffinPowermate.MOVE_LEFT else 'RIGHT', button))
 
   def raw_listener(data):
-    print "Moved: {0}".format(data)
+    print("Moved: {0}".format(data))
 
   devices = GriffinPowermate.find_all()
   if len(devices) > 0:
-    print "Found Powermates"
+    print("Found Powermates")
     powermate = devices[0]
     
     try:

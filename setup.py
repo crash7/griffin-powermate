@@ -5,7 +5,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='griffin_powermate',
-    version='1.0.2',
+    version='1.0.3',
 
     description='A simple library to use the Griffin Powermate on Windows',
     long_description='',
@@ -23,6 +23,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.5',
     ],
 
     keywords='griffin powermate development',

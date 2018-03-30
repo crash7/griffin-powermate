@@ -7,20 +7,21 @@ This library to use the [Griffin Powermate](https://store.griffintechnology.com/
 ## Requirements
 - Windows (yes, this is windows only; tested on Windows 7 x64)
 - Python 2.7 (tested on 2.7.9)
+- Python 3 (tested on 3.5)
 - [pywinusb](https://github.com/rene-aguirre/pywinusb)
 - A [Griffin Powermate](https://store.griffintechnology.com/powermate)!
 
 ## Install with pip
-```pip install griffin_powermate```
+```pip install git+https://github.com/alexisfcote/griffin-powermate```
 
 ## Usage
 ```
 def move_listener(direction, button):
-  print "Moved: {0} - {1}".format(direction, button)
+  print("Moved: {0} - {1}".format(direction, button))
 
 devices = GriffinPowermate.find_all()
 if len(devices) > 0:
-  print "Found Powermates"
+  print("Found Powermates")
   powermate = devices[0]
     
   try:
