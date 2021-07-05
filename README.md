@@ -12,10 +12,13 @@ This library to use the [Griffin Powermate](https://store.griffintechnology.com/
 
 ## Install with pip
 ```pip install griffin_powermate```
+```pip install pywinusb```
 
 ## Usage
-```
+```py
 from griffin_powermate import GriffinPowermate
+from time import sleep
+from msvcrt import kbhit() # ctrl+c to exit
 
 def move_listener(direction, button):
   print "Moved: {0} - {1}".format(direction, button)
