@@ -37,6 +37,9 @@ if len(devices) > 0:
     powermate.close()
 ```
 
+A simple example implementation is included:  
+Create mousewheel events when turning the knob (coarse when button pressed, fine when not pressed)
+
 ## API
 TBC
 
