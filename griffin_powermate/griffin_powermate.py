@@ -67,11 +67,32 @@ if __name__ == '__main__':
     from time import sleep
     from msvcrt import kbhit
 
+    # example implementation: create mousewheel events when turning the knob (coarse when button pressed, fine when not pressed)
+    import win32api # pip install pywin32
+    from win32con import *
+    import pyautogui # pip install pyautogui
+
+    MOUSEWHEEL_STEPSIZE_COARSE = 50
+    MOUSEWHEEL_STEPSIZE_FINE = 5
+    
     def move_listener(direction, button):
         print("Moved: {0} - {1}"
               .format('LEFT' if direction == GriffinPowermate.MOVE_LEFT
                       else 'RIGHT', button))
 
+        # here we create mousewheel events
+        mouse_pos = pyautogui.position()
+        if button == 1: # coarse mousewheel
+            if direction == GriffinPowermate.MOVE_RIGHT:
+                win32api.mouse_event(MOUSEEVENTF_WHEEL, mouse_pos[0], mouse_pos[1], MOUSEWHEEL_STEPSIZE_COARSE, 0)
+            else:
+                win32api.mouse_event(MOUSEEVENTF_WHEEL, mouse_pos[0], mouse_pos[1], -MOUSEWHEEL_STEPSIZE_COARSE, 0)
+        else: # if button == 0, fine mousewheel
+            if direction == GriffinPowermate.MOVE_RIGHT:
+                win32api.mouse_event(MOUSEEVENTF_WHEEL, mouse_pos[0], mouse_pos[1], MOUSEWHEEL_STEPSIZE_FINE, 0)
+            else:
+                win32api.mouse_event(MOUSEEVENTF_WHEEL, mouse_pos[0], mouse_pos[1], -MOUSEWHEEL_STEPSIZE_FINE, 0)
+        
     def raw_listener(data):
         print "Moved: {0}".format(data)
 
